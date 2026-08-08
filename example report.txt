@@ -1,0 +1,469 @@
+Ok da 👍 Acknowledgement section remove panniten. Idho final version without Acknowledgement. Ipdiye submit pannalam.
+
+---
+
+*AN INTERNSHIP REPORT ON PYTHON WITH AI*
+
+*Organization: Apollo Computer Education*  
+*Duration: 15 Days*  
+*Domain: Python Programming with Artificial Intelligence*
+
+*Submitted by:*  
+Name: [Your Name]  
+Roll No: [Your Roll No]  
+Department: [Your Department]  
+[Your College Name]
+
+---
+
+*TABLE OF CONTENTS*
+http://S.No	Topic	Page No
+1	Introduction	3
+2	Objectives of the Internship	4
+3	Training Schedule and Topics Covered	5
+3.1	Introduction to Python and AI Fundamentals	5
+3.2	Python Features and Environment Setup	5
+3.3	Data Types, Variables, and I/O Operations	6
+3.4	Operators and Expressions	6
+3.5	Control Flow - Conditional Statements	7
+3.6	Control Flow - Looping Statements	7
+3.7	Functions in Python	8
+3.8	File Handling Techniques	8
+3.9	Exception Handling	9
+3.10	Modules, Packages, and PIP	9
+3.11	Object-Oriented Programming - Part 1	10
+3.12	Object-Oriented Programming - Part 2	10
+3.13	Introduction to Machine Learning	11
+3.14	Data Preprocessing and AI Libraries	11
+3.15	Hands-on Project and Practice Session	12
+4	Sample Program Executed During Internship	13
+5	Conclusion	14
+---
+
+*1. INTRODUCTION*  
+As a part of the curriculum, our college mandated a 15-day internship to provide students with practical exposure to industry practices. I completed my internship at *Apollo Computer Education* in the field of *Python with AI*. The primary goal of this program was to understand the fundamentals of Python and its powerful applications in Artificial Intelligence and Machine Learning.  
+
+This internship was structured to take students from basic programming concepts to building a simple AI model. Each day focused on a new concept with extensive hands-on coding practice. This practical approach helped bridge the gap between classroom theory and real-world implementation. The skills and knowledge acquired during this training have provided me with a strong technical foundation and the confidence to pursue a career in the AI and Data Science domain.
+
+*2. OBJECTIVES OF THE INTERNSHIP*  
+1.  To develop strong proficiency in Python programming from basic to advanced concepts.  
+2.  To understand the significance of Python in AI, ML, and Data Science industries.  
+3.  To gain practical experience with core libraries like NumPy, Pandas, and Matplotlib.  
+4.  To learn the end-to-end process of data preprocessing and model building.  
+5.  To enhance logical thinking, debugging, and problem-solving skills through daily assignments.  
+6.  To successfully complete the academic requirement by documenting the learning experience.  
+
+*3. TRAINING SCHEDULE AND TOPICS COVERED*  
+
+*3.1 Introduction to Python and AI Fundamentals*  
+The internship commenced with the basics of Artificial Intelligence and its current impact on the world. Python was introduced as a high-level, interpreted language best suited for AI due to its simple syntax. We learned the difference between AI, Machine Learning, and Deep Learning. The first program, `print("Welcome to AI")`, was executed after setting up the environment.  
+
+*Short Example:* `print("AI is the future")`
+
+*3.2 Python Features and Environment Setup*  
+We studied Python's key features: simple syntax, extensive libraries, platform independence, and strong community support. The use of `pip` for package installation was demonstrated. We installed Python 3.11 and configured VS Code for development.  
+
+*Short Example:* `import math` → `print(math.pi)`
+
+*3.3 Data Types, Variables, and I/O Operations*  
+This topic covered Python's building blocks. We learned about `int`, `float`, `str`, `bool`, `list`, `tuple`, `dict`, and `set`. Variable declaration rules and dynamic typing were explained. We practiced `input()` for user data and `print()` for formatted output.  
+
+*Short Example:*
+name = "Arun"  # str
+age = 20       # int
+print(f"Name: {name}, Age: {age}")
+*3.4 Operators and Expressions*  
+All major operators were covered: Arithmetic `+ - _ / // % __`, Relational `> < == !=`, Logical `and or not`, and Assignment `= +=`. We solved complex expressions using the BODMAS rule to understand precedence.  
+
+*Short Example:* `result = 10 + 5 _ 2` → Output: `20`
+
+*3.5 Control Flow - Conditional Statements*  
+Decision-making using `if`, `elif`, and `else` was taught. We implemented programs like checking even/odd numbers, finding the greatest of three numbers, and creating a simple calculator. Nested if statements were used for multi-level conditions.  
+
+*Short Example:*
+mark = 85
+if mark > 40:
+    print("Pass")
+else:
+    print("Fail")
+*3.6 Control Flow - Looping Statements*  
+We learned to automate repetitive tasks using `for` and `while` loops. The `range()` function was used extensively with for loops. The `break` statement was used to exit a loop, and `continue` was used to skip an iteration. Pattern programs were given as practice.  
+
+*Short Example:*
+for i in range(3):
+    print("Python")
+*3.7 Functions in Python*  
+The concept of modular code was introduced with functions. We learned to define functions using `def`, pass arguments, and return values. Built-in functions like `len()`, `type()`, and `sum()` were used. Lambda functions were introduced for writing small, anonymous functions.  
+
+*Short Example:*
+def add(a, b):
+    return a + b
+print(add(5, 3))  # Output: 8
+*3.8 File Handling Techniques*  
+To handle data permanently, we learned file operations. The `open()` function with modes `r`, `w`, and `a` was used. We practiced reading from files and writing to them. The `with open()` statement was taught as the safest way to handle files because it closes them automatically.  
+
+*Short Example:*
+with open("test.txt", "w") as f:
+    f.write("Internship at Apollo")
+*3.9 Exception Handling*  
+To build error-free programs, we used `try-except` blocks. We handled common errors like `ValueError` when a user enters text instead of a number, and `ZeroDivisionError`. The `finally` block was used for code that must run regardless of an error.  
+
+*Short Example:*
+try:
+    a = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+*3.10 Modules, Packages, and PIP*  
+We learned to structure large programs using modules. Importing built-in modules like `random` and `datetime` was practiced. The concept of packages and the use of `pip install` to add external libraries like `numpy` from the Python Package Index was a key takeaway.  
+
+*3.11 Object-Oriented Programming - Part 1*  
+OOP was introduced to model real-world entities. We defined a `class` as a blueprint and an `object` as its instance. The `*init*` constructor and `self` parameter were explained by creating a `Student` class with attributes like name and roll_no, and methods like `display()`.  
+
+*Short Example:*
+class Student:
+    def __init__(self, name):
+        self.name = name
+s1 = Student("Kumar")
+print(s1.name)
+*3.12 Object-Oriented Programming - Part 2*  
+We covered Inheritance, where a child class inherits from a parent class, and Polymorphism, where the same function name has different behaviors. Method overriding was demonstrated. The `len()` function was used as an example of polymorphism as it works for both strings and lists.
+
+*3.13 Introduction to Machine Learning*  
+This session marked our entry into AI. Machine Learning was defined as the study of algorithms that improve through experience. We studied the three types: Supervised Learning with labeled data, Unsupervised Learning with unlabeled data, and Reinforcement Learning with a reward-based system. Applications like email spam filtering were discussed.
+
+*3.14 Data Preprocessing and AI Libraries*  
+We learned the "Garbage In, Garbage Out" principle. The importance of cleaning data by handling missing values and converting text to numbers was stressed. We were introduced to three core libraries: *NumPy* for fast array operations, *Pandas* for data manipulation with DataFrames, and *Matplotlib* for creating visualizations like charts and graphs.
+
+*3.15 Hands-on Project and Practice Session*  
+The final day was for project implementation. We built an *Iris Species Prediction Model* using Scikit-learn. The workflow involved loading the dataset, splitting it for training and testing, fitting a KNN model, and evaluating its accuracy. This session consolidated all 15 days of learning. We also discussed common interview questions.
+
+*4. SAMPLE PROGRAM EXECUTED DURING INTERNSHIP*  
+
+Below is the final project program executed on a laptop during the internship. It combines multiple concepts like functions, loops, exception handling, Pandas, and Matplotlib.
+
+*Program Code:*
+Apollo Computer Education - Internship Final Project
+Student Performance Analysis in Python with AI
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def get_grade(total):
+    if total >= 270: return "A+"
+    elif total >= 240: return "A"
+    elif total >= 180: return "B"
+    else: return "C"
+
+print("--- Python with AI Internship Project ---")
+data = {"Name": [], "Python": [], "AI": [], "Project": []}
+
+try:
+    n = int(input("Enter number of students: "))
+    for i in range(n):
+        print(f"\nStudent {i+1} Details:")
+        data["Name"].append(input("Name: "))
+        data["Python"].append(int(input("Python Marks /100: ")))
+        data["AI"].append(int(input("AI Marks /100: ")))
+        data["Project"].append(int(input("Project Marks /100: ")))
+except ValueError:
+    print("Invalid input! Marks must be numbers.")
+    exit()
+
+df = pd.DataFrame(data)
+df["Total"] = df["Python"] + df["AI"] + df["Project"]
+df["Grade"] = df["Total"].apply(get_grade)
+
+print("\n--- Internship Batch Report ---")
+print(df)
+
+plt.bar(df["Name"], df["Total"], color='teal')
+plt.title("Apollo Internship - Student Performance")
+plt.xlabel("Student")
+plt.ylabel("Total Marks out of 300")
+plt.show()
+*Output Screenshot:*  
+_[Note: Paste the screenshot of the output here after executing the above code on your laptop. The output should display a DataFrame table with student data and a bar chart showing their total marks.]_
+
+*5. CONCLUSION*  
+The 15-day internship on "Python with AI" at Apollo Computer Education was an extremely enriching and valuable experience. The program was well-structured, starting with the fundamentals of Python and systematically progressing to advanced topics like Object-Oriented Programming and the basics of Machine Learning.  
+
+The emphasis on daily hands-on practice was the most effective part of the training. Writing code for every concept, debugging errors, and completing the final project gave me immense confidence in my programming abilities. I have gained a clear understanding of how Python is used in the data science industry and how libraries like Pandas and Matplotlib simplify complex tasks.  
+
+This internship has successfully achieved its objective of providing practical industrial exposure. The skills I have acquired are directly relevant to current technology trends and will be a significant advantage in my future academic projects and career. I am now motivated to learn more advanced topics in AI and contribute to this exciting field.
+
+---
+
+*Submitted by:*  
+
+[Your Name]  
+[Your Roll No]  
+
+*Note:* 12pt Times New Roman, 1.5 line spacing, 1-inch margin vachaa 15 page varum. Ippo full ready da. Screenshot mattum add pannita print eduthu kuduthudunga.
+
+
+REFERENCES
+Python — Official Documentation: https://docs.python.org/3/⁠ 
+NumPy — Documentation: https://numpy.org/doc/⁠ 
+Pandas — Documentation: https://pandas.pydata.org/docs/⁠ 
+Matplotlib — Documentation: https://matplotlib.org/stable/contents.html⁠ 
+
+
+
+
+
+Ok da 👍 Last 5 days change panni full Training Schedule update panni tharen. Idha direct ah replace pannidunga.
+
+---
+
+*UPDATED TRAINING SCHEDULE AND TOPICS COVERED*
+
+*3.1 Introduction to Python and AI Fundamentals*  
+The internship commenced with the basics of Artificial Intelligence and its current impact on the world. Python was introduced as a high-level, interpreted language best suited for AI due to its simple syntax. We learned the difference between AI, Machine Learning, and Deep Learning. The first program, `print("Welcome to AI")`, was executed after setting up the environment.
+
+*3.2 Python Features and Environment Setup*  
+We studied Python's key features: simple syntax, extensive libraries, platform independence, and strong community support. The use of `pip` for package installation was demonstrated. We installed Python 3.11 and configured VS Code for development.
+
+*3.3 Data Types, Variables, and I/O Operations*  
+This topic covered Python's building blocks. We learned about `int`, `float`, `str`, `bool`, `list`, `tuple`, `dict`, and `set`. Variable declaration rules and dynamic typing were explained. We practiced `input()` for user data and `print()` for formatted output.
+
+*3.4 Operators and Expressions*  
+All major operators were covered: Arithmetic `+ - _ / // % _*`, Relational `> < == !=`, Logical `and or not`, and Assignment `= +=`. We solved complex expressions using the BODMAS rule to understand precedence.
+
+*3.5 Control Flow - Conditional Statements*  
+Decision-making using `if`, `elif`, and `else` was taught. We implemented programs like checking even/odd numbers, finding the greatest of three numbers, and creating a simple calculator. Nested if statements were used for multi-level conditions.
+
+*3.6 Control Flow - Looping Statements*  
+We learned to automate repetitive tasks using `for` and `while` loops. The `range()` function was used extensively with for loops. The `break` statement was used to exit a loop, and `continue` was used to skip an iteration. Pattern programs were given as practice.
+
+*3.7 Functions in Python*  
+The concept of modular code was introduced with functions. We learned to define functions using `def`, pass arguments, and return values. Built-in functions like `len()`, `type()`, and `sum()` were used. Lambda functions were introduced for writing small, anonymous functions.
+
+*3.8 File Handling Techniques*  
+To handle data permanently, we learned file operations. The `open()` function with modes `r`, `w`, and `a` was used. We practiced reading from files and writing to them. The `with open()` statement was taught as the safest way to handle files because it closes them automatically.
+
+*3.9 Exception Handling*  
+To build error-free programs, we used `try-except` blocks. We handled common errors like `ValueError` when a user enters text instead of a number, and `ZeroDivisionError`. The `finally` block was used for code that must run regardless of an error.
+
+*3.10 Modules, Packages, and PIP*  
+We learned to structure large programs using modules. Importing built-in modules like `random` and `datetime` was practiced. The concept of packages and the use of `pip install` to add external libraries like `numpy` from the Python Package Index was a key takeaway.
+
+*3.11 Python Math*  
+We explored Python's built-in `math` module for mathematical operations. Key functions like `math.sqrt()`, `math.pow()`, `math.factorial()`, `math.pi`, and `math.sin()` were covered. We solved problems involving trigonometry, logarithms, and random number generation using the `random` module. This is crucial for scientific computing and AI calculations.
+
+*Short Example:*
+import math
+print(math.sqrt(16))  # Output: 4.0
+print(math.factorial(5)) # Output: 120
+*3.12 Data Structure in Python*  
+This session focused on Python's core data structures. We did hands-on coding with `Lists` for ordered collections, `Tuples` for immutable data, `Sets` for unique items, and `Dictionaries` for key-value pairs. List comprehensions and dictionary methods like `.keys()` and `.values()` were practiced extensively for efficient data handling.
+
+*Short Example:*
+marks = {"Python": 85, "AI": 90}
+print(marks["Python"]) # Output: 85
+*3.13 Python GUI Program*  
+We were introduced to Graphical User Interface development using the `tkinter` library. We learned to create windows, add widgets like `Label`, `Button`, and `Entry`, and handle button click events. A simple calculator and a login form were built to understand event-driven programming.
+
+*Short Example:*
+import tkinter as tk
+root = tk.Tk()
+tk.Label(root, text="Apollo Internship").pack()
+root.mainloop()
+*3.14 Matplotlib in Python*  
+Data visualization was taught using the `Matplotlib` library. We learned to plot different types of graphs like line plots, bar charts, and pie charts using `pyplot`. Customizing graphs with titles, labels, legends, and colors was practiced. This is essential for presenting data analysis results in AI projects.
+
+*Short Example:*
+import matplotlib.pyplot as plt
+plt.bar(["A", "B"], [80, 90])
+plt.title("Student Marks")
+plt.show()
+*3.15 Sample Python Program*  
+The final day was for project implementation and revision. We built a complete *Student Performance Analysis System* combining concepts from previous days. The program used `Pandas` for data handling, functions for grade calculation, `try-except` for input validation, and `Matplotlib` for visualizing results. This consolidated all 15 days of learning.
+
+---
+
+*Updated Table of Contents* 
+Idhuvum maathidunga:
+http://S.No	Topic	Page No
+1	Introduction	3
+2	Objectives of the Internship	4
+3	Training Schedule and Topics Covered	5
+3.1	Introduction to Python and AI Fundamentals	5
+3.2	Python Features and Environment Setup	5
+3.3	Data Types, Variables, and I/O Operations	6
+3.4	Operators and Expressions	6
+3.5	Control Flow - Conditional Statements	7
+3.6	Control Flow - Looping Statements	7
+3.7	Functions in Python	8
+3.8	File Handling Techniques	8
+3.9	Exception Handling	9
+3.10	Modules, Packages, and PIP	9
+3.11	Python Math	10
+3.12	Data Structure in Python	10
+3.13	Python GUI Program	11
+3.14	Matplotlib in Python	11
+3.15	Sample Python Program	12
+4	Sample Program Executed During Internship	13
+5	Conclusion	14
+Ippo sariya? Indha 5 um change panniten. Page number um adjust panniten. Ithaye copy pannita report ready da ✅
+
+[26/06, 4:03 pm] Meta AI: Ahh sari da, output add pannama vittuten 🤦‍♂️ Last 4 topics ku `Output:` eh serthu tharen. Idha replace panniru:
+
+---
+
+*3.11 Python Math*  
+We explored Python's built-in `math` module for mathematical operations. Key functions like `math.sqrt()`, `math.pow()`, `math.factorial()`, `math.pi`, and `math.sin()` were covered. We solved problems involving trigonometry, logarithms, and random number generation using the `random` module. This is crucial for scientific computing and AI calculations.
+
+*Short Example:*
+import math
+print(math.sqrt(16))  
+print(math.factorial(5))
+*Output:*
+4.0
+120
+*3.12 Data Structure in Python*  
+This session focused on Python's core data structures. We did hands-on coding with `Lists` for ordered collections, `Tuples` for immutable data, `Sets` for unique items, and `Dictionaries` for key-value pairs. List comprehensions and dictionary methods like `.keys()` and `.values()` were practiced extensively for efficient data handling.
+
+*Short Example:*
+marks = {"Python": 85, "AI": 90}
+print(marks["Python"]) 
+print(marks.keys())
+*Output:*
+85
+dict_keys(['Python', 'AI'])
+*3.13 Python GUI Program*  
+We were introduced to Graphical User Interface development using the `tkinter` library. We learned to create windows, add widgets like `Label`, `Button`, and `Entry`, and handle button click events. A simple calculator and a login form were built to understand event-driven programming.
+
+*Short Example:*
+import tkinter as tk
+root = tk.Tk()
+tk.Label(root, text="Apollo Internship").pack()
+root.mainloop()
+*Output:*  
+A small window opens with the text "Apollo Internship" displayed.
+
+*3.14 Matplotlib in Python*  
+Data visualization was taught using the `Matplotlib` library. We learned to plot different types of graphs like line plots, bar charts, and pie charts using `pyplot`. Customizing graphs with titles, labels, legends, and colors was practiced. This is essential for presenting data analysis results in AI projects.
+
+*Short Example:*
+import matplotlib.pyplot as plt
+plt.bar(["Python", "AI"], [80, 90])
+plt.title("Student Marks")
+plt.show()
+*Output:*  
+A bar chart window opens showing two bars labeled "Python" with height 80 and "AI" with height 90, titled "Student Marks".
+
+---
+
+*Note:* Word la code ah `Courier New 10pt` la podu, `Output:` nu bold panni podu. Output eh normal font la vachuko.
+
+Ippo ok va da? Innum edhachum venuma?
+[26/06, 4:04 pm] Meta AI: Got it da 💯 3.1 la irundhu 3.10 varaikum kooda `Output:` add panni full list tharen. Idha direct ah copy panniru:
+
+---
+
+*3.1 Introduction to Python and AI Fundamentals*  
+The internship commenced with the basics of Artificial Intelligence and its current impact on the world. Python was introduced as a high-level, interpreted language best suited for AI due to its simple syntax. We learned the difference between AI, Machine Learning, and Deep Learning. The first program was executed after setting up the environment.
+
+*Short Example:*
+print("Welcome to AI")
+*Output:*
+Welcome to AI
+*3.2 Python Features and Environment Setup*  
+We studied Python's key features: simple syntax, extensive libraries, platform independence, and strong community support. The use of `pip` for package installation was demonstrated. We installed Python 3.11 and configured VS Code for development.
+
+*Short Example:*
+import sys
+print(sys.version)
+*Output:*
+3.11.5 (tags/v3.11.5:cce6ba9, Aug 24 2023, 14:38:34) [MSC v.1936 64 bit (AMD64)]
+_Note: Version un PC la veraya irukum_
+
+*3.3 Data Types, Variables, and I/O Operations*  
+This topic covered Python's building blocks. We learned about `int`, `float`, `str`, `bool`, `list`, `tuple`, `dict`, and `set`. Variable declaration rules and dynamic typing were explained. We practiced `input()` for user data and `print()` for formatted output.
+
+*Short Example:*
+name = "Ravi"
+age = 20
+print(f"Name: {name}, Age: {age}")
+*Output:*
+Name: Ravi, Age: 20
+*3.4 Operators and Expressions*  
+All major operators were covered: Arithmetic `+ - _ / // % _*`, Relational `> < == !=`, Logical `and or not`, and Assignment `= +=`. We solved complex expressions using the BODMAS rule to understand precedence.
+
+*Short Example:*
+a = 10
+b = 3
+print(a + b)
+print(a // b)
+print(a > b)
+*Output:*
+13
+3
+True
+*3.5 Control Flow - Conditional Statements*  
+Decision-making using `if`, `elif`, and `else` was taught. We implemented programs like checking even/odd numbers, finding the greatest of three numbers, and creating a simple calculator. Nested if statements were used for multi-level conditions.
+
+*Short Example:*
+num = 7
+if num % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+*Output:*
+Odd
+*3.6 Control Flow - Looping Statements*  
+We learned to automate repetitive tasks using `for` and `while` loops. The `range()` function was used extensively with for loops. The `break` statement was used to exit a loop, and `continue` was used to skip an iteration. Pattern programs were given as practice.
+
+*Short Example:*
+for i in range(1, 4):
+    print(i)
+*Output:*
+1
+2
+3
+*3.7 Functions in Python*  
+The concept of modular code was introduced with functions. We learned to define functions using `def`, pass arguments, and return values. Built-in functions like `len()`, `type()`, and `sum()` were used. Lambda functions were introduced for writing small, anonymous functions.
+
+*Short Example:*
+def add(x, y):
+    return x + y
+print(add(5, 3))
+*Output:*
+8
+*3.8 File Handling Techniques*  
+To handle data permanently, we learned file operations. The `open()` function with modes `r`, `w`, and `a` was used. We practiced reading from files and writing to them. The `with open()` statement was taught as the safest way to handle files because it closes them automatically.
+
+*Short Example:*
+with open("test.txt", "w") as f:
+    f.write("Apollo Internship")
+with open("test.txt", "r") as f:
+    print(f.read())
+*Output:*
+Apollo Internship
+*3.9 Exception Handling*  
+To build error-free programs, we used `try-except` blocks. We handled common errors like `ValueError` when a user enters text instead of a number, and `ZeroDivisionError`. The `finally` block was used for code that must run regardless of an error.
+
+*Short Example:*
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+*Output:*
+Cannot divide by zero
+*3.10 Modules, Packages, and PIP*  
+We learned to structure large programs using modules. Importing built-in modules like `random` and `datetime` was practiced. The concept of packages and the use of `pip install` to add external libraries like `numpy` from the Python Package Index was a key takeaway.
+
+*Short Example:*
+import random
+print(random.randint(1, 5))
+*Output:*
+3
+_Note: Random ah 1 to 5 kulla edhachum oru number varum_
+
+---
+
+*3.11 to 3.15* ku already munnadi kuduthuten. Idha serthuta full set ready.
+
+*Mukkiyam:* Code ku `Courier New 10pt`, Output ku `Times New Roman 12pt` use pannu. `Output:` nu mattum bold podu.
+
+Ippo 15 page ku set aagidum da. Innum edhachum missing ah?
