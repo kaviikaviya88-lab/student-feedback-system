@@ -2,9 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from django.core.mail import send_mail
 from django.db.models import Count
-from django.conf import settings
 from .models import Feedback
 
 
@@ -68,17 +66,6 @@ def home(request):
         )
 
         feedback.save()
-
-        try:
-            send_mail(
-                "Feedback Submitted Successfully",
-                f"Dear {name},\n\nThank you for submitting your feedback.",
-                settings.DEFAULT_FROM_EMAIL,
-                [email],
-                fail_silently=False,
-            )
-        except Exception as e:
-            print("MAIL ERROR:", e)
 
         messages.success(request, "Thank you for your feedback!")
         return redirect("home")
