@@ -222,36 +222,45 @@ font-weight:500;
 @media(max-width:768px){
 
 .header{
-padding:30px 50px;
+padding:20px 20px;
 }
 
 .header-content{
-flex-direction:column;
+display:flex;
+flex-direction:row;
+align-items:flex-start;
 text-align:center;
 }
 
 .logo{
-width:100%;
-margin-bottom:15px;
+width:90px;
+min-width:90px;
+margin-bottom:0;
 }
 
 .logo img{
-width:130px;
-height:130px;
+width:75px;
+height:75px;
+}
+
+.college{
+flex:1;
 }
 
 .college h1{
-font-size:28px;
+font-size:22px;
+line-height:28px;
 }
 
 .college h2{
-font-size:18px;
+font-size:14px;
+line-height:20px;
 }
 
 .college h3{
-font-size:16px;
+font-size:13px;
+line-height:18px;
 }
-
 .hero-card{
 padding:25px;
 }
