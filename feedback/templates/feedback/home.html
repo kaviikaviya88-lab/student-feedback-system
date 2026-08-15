@@ -1,0 +1,295 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<div class="row"> 
+    <div class="col-md-12">
+<form method="POST">
+     {% csrf_token %}
+<!-- Student Name -->
+<div class="mb-3">
+    <label for="name" class="form-label">Student Name*</label>
+    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required>
+    <div class="invalid-feedback">
+        Please enter your name.
+    </div>
+</div>
+<!-- Email Address -->
+<div class="mb-3">
+    <label for="email" class="form-label">Email Address*</label>
+    <input type="email"
+           class="form-control"
+           id="email"
+           name="email"
+           placeholder="Enter your email address"
+           required>
+</div>
+
+<!-- Degree -->
+<div class="mb-3">
+    <label for="degree" class="form-label">Degree*</label>
+    <select class="form-select" id="degree" name="degree" required>
+        <option value="" selected disabled>Select Degree</option>
+        <option value="UG">UG</option>
+        <option value="PG">PG</option>
+    </select>
+    <div class="invalid-feedback">
+        Please select your degree.
+    </div>
+</div>
+
+<!-- Course -->
+<div class="mb-3">
+
+    <label for="course" class="form-label">
+        Course Name*
+    </label>
+
+    <select class="form-select" id="course" name="course" required>
+
+        <option value="" selected disabled>
+            Select Course
+        </option>
+
+    </select>
+
+    <div class="invalid-feedback">
+        Please select your course.
+    </div>
+
+</div>
+<!-- Year -->
+<div class="mb-3">
+    <label for="year" class="form-label">Year*</label>
+    <select class="form-select" id="year" name="year" required>
+        <option value="" selected disabled>Select Year</option>
+        <option value="I Year">I Year</option>
+        <option value="II Year">II Year</option>
+        <option value="III Year" id="thirdYear">III Year</option>
+    </select>
+    <div class="invalid-feedback">
+        Please select your year.
+    </div>
+</div>
+
+                <!-- Question 1 -->
+<div class="mb-3">
+    <label class="form-label">1. How do you rate the teaching quality of the faculty?</label>
+    <select class="form-select" name="q1" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 2 -->
+<div class="mb-3">
+    <label class="form-label">2. How well did the faculty explain the subject?</label>
+    <select class="form-select" name="q2" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 3 -->
+<div class="mb-3">
+    <label class="form-label">3. How do you rate the course content?</label>
+    <select class="form-select" name="q3" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 4 -->
+<div class="mb-3">
+    <label class="form-label">4. How do you rate the communication skills of the faculty?</label>
+    <select class="form-select" name="q4" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 5 -->
+<div class="mb-3">
+    <label class="form-label">5. How do you rate the classroom facilities?</label>
+    <select class="form-select" name="q5" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 6 -->
+<div class="mb-3">
+    <label class="form-label">6. How do you rate the laboratory facilities?</label>
+    <select class="form-select" name="q6" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 7 -->
+<div class="mb-3">
+    <label class="form-label">7. How do you rate the library facilities?</label>
+    <select class="form-select" name="q7" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 8 -->
+<div class="mb-3">
+    <label class="form-label">8. How do you rate the learning environment?</label>
+    <select class="form-select" name="q8" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 9 -->
+<div class="mb-3">
+    <label class="form-label">9. How do you rate the support provided by the faculty?</label>
+    <select class="form-select" name="q9" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>
+
+<!-- Question 10 -->
+<div class="mb-3">
+    <label class="form-label">10. Overall, how do you rate your learning experience?</label>
+    <select class="form-select" name="q10" required>
+        <option value="" selected disabled>Select Answer</option>
+        <option value="Excellent">Excellent</option>
+        <option value="Good">Good</option>
+        <option value="Average">Average</option>
+        <option value="Poor">Poor</option>
+    </select>
+</div>    
+                    
+<!-- Comments -->
+<div class="mb-3">
+    <label for="comment" class="form-label">Additional Comments / Suggestions*</label>
+    <textarea class="form-control" id="comment" name="comment" rows="4"
+        placeholder="Write your valuable feedback here..." required></textarea>
+    <div class="invalid-feedback">
+        Please provide your comments.
+    </div>
+</div>
+
+<div class="d-grid">
+    <button type="submit" class="btn btn-success btn-lg">
+        Submit Feedback
+    </button>
+</div>
+<script>
+
+document.getElementById("degree").addEventListener("change", function () {
+
+    let degree = this.value;
+    let course = document.getElementById("course");
+    let thirdYear = document.getElementById("thirdYear");
+
+    // Clear old courses
+    course.innerHTML = "";
+
+    // Default option
+    let defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "Select Course";
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    course.appendChild(defaultOption);
+
+
+    if (degree === "UG") {
+
+        let ugCourses = [
+            "B.Sc Computer Science",
+            "BCA",
+            "B.A Tamil",
+            "B.A English",
+            "B.A Economics",
+            "B.Com",
+            "B.Sc Mathematics"
+        ];
+
+        ugCourses.forEach(function(courseName) {
+
+            let option = document.createElement("option");
+
+            option.value = courseName;
+            option.textContent = courseName;
+
+            course.appendChild(option);
+
+        });
+
+        // UG - III Year available
+        thirdYear.hidden = false;
+
+    }
+
+
+    else if (degree === "PG") {
+
+        let pgCourses = [
+            "M.Sc Computer Science",
+            "M.Com",
+            "M.A Tamil",
+            "M.A English",
+            "M.Sc Mathematics"
+        ];
+
+        pgCourses.forEach(function(courseName) {
+
+            let option = document.createElement("option");
+
+            option.value = courseName;
+            option.textContent = courseName;
+
+            course.appendChild(option);
+
+        });
+
+        // PG - III Year hidden
+        thirdYear.hidden = true;
+
+    }
+
+});
+
+</script></form>
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,357 @@
+{% extends 'feedback/base.html' %}
+{% load static %}
+
+{% block title %}Admin Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+
+<h2 class="text-center mb-4">
+    Student Feedback Dashboard
+</h2>
+
+
+<!-- Summary Cards -->
+
+<div class="row mb-4">
+
+    <div class="col-md-2">
+        <div class="card bg-primary text-white shadow">
+            <div class="card-body text-center">
+                <h6>Total Feedback</h6>
+                <h3>{{ total_feedback }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="card bg-success text-white shadow">
+            <div class="card-body text-center">
+                <h6>Excellent</h6>
+                <h3>{{ excellent_count }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-2">
+        <div class="card bg-info text-white shadow">
+            <div class="card-body text-center">
+                <h6>Good</h6>
+                <h3>{{ good_count }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="card bg-warning shadow">
+            <div class="card-body text-center">
+                <h6>Average</h6>
+                <h3>{{ average_count }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="card bg-danger text-white shadow">
+            <div class="card-body text-center">
+                <h6>Poor</h6>
+                <h3>{{ poor_count }}</h3>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<!-- Filter + Pie Chart Section -->
+
+<div class="row mb-4">
+
+
+<!-- Left Side Filter -->
+
+<div class="col-md-7">
+
+<form method="GET" class="row g-3">
+
+
+<div class="col-md-6">
+<label class="form-label">Degree</label>
+
+<select name="degree" class="form-select">
+
+<option value="">All</option>
+<option value="UG">UG</option>
+<option value="PG">PG</option>
+
+</select>
+
+</div>
+
+
+
+<div class="col-md-6">
+<label class="form-label">Year</label>
+
+<select name="year" class="form-select">
+
+<option value="">All</option>
+<option value="I Year">I Year</option>
+<option value="II Year">II Year</option>
+<option value="III Year">III Year</option>
+
+</select>
+
+</div>
+
+
+
+<div class="col-md-6">
+
+<label class="form-label">Course</label>
+
+<select name="course" class="form-select">
+
+<option value="">All Courses</option>
+
+{% for c in courses %}
+
+<option value="{{ c.course }}">
+{{ c.course }}
+</option>
+
+{% endfor %}
+
+</select>
+
+</div>
+
+
+
+<div class="col-md-6">
+
+<label class="form-label">Overall Rating</label>
+
+<select name="rating" class="form-select">
+
+<option value="">All Ratings</option>
+<option value="Excellent">Excellent</option>
+<option value="Good">Good</option>
+<option value="Average">Average</option>
+<option value="Poor">Poor</option>
+
+</select>
+
+</div>
+
+
+
+<div class="col-md-12">
+
+<button class="btn btn-primary">
+Apply Filters
+</button>
+
+</div>
+
+
+</form>
+
+</div>
+
+
+
+<!-- Right Side Pie Chart -->
+
+<div class="col-md-5">
+
+<div class="card shadow">
+
+<div class="card-header bg-dark text-white">
+Feedback Analysis
+</div>
+
+
+<div class="card-body">
+
+<div style="width:250px;height:250px;margin:auto;">
+
+<canvas id="feedbackChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+<!-- Feedback Table -->
+
+<div class="table-responsive mt-4">
+
+    <table class="table table-bordered table-hover">
+
+        <thead class="table-dark">
+
+            <tr>
+
+                <th>Name</th>
+
+                <th>Degree</th>
+
+                <th>Year</th>
+
+                <th>Course</th>
+
+                <th>Overall Rating</th>
+
+                <th>Comment</th>
+
+                <th>Date</th>
+
+            </tr>
+
+        </thead>
+
+
+        <tbody>
+
+        {% for feedback in feedbacks %}
+
+            <tr>
+
+                <td>{{ feedback.name }}</td>
+
+                <td>{{ feedback.degree }}</td>
+
+                <td>{{ feedback.year }}</td>
+
+                <td>{{ feedback.course }}</td>
+
+
+                <td>
+
+                    <span class="badge bg-primary">
+                        {{ feedback.overall_rating }}
+                    </span>
+
+                </td>
+
+
+                <td>{{ feedback.comment }}</td>
+
+
+                <td>
+                    {{ feedback.timestamp|date:"d-m-Y" }}
+                </td>
+
+
+            </tr>
+
+
+        {% endfor %}
+
+        </tbody>
+
+
+    </table>
+
+</div>
+<!-- Chart Script -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<script>
+
+const ctx = document.getElementById('feedbackChart');
+
+
+new Chart(ctx, {
+
+    type: 'pie',
+
+    data: {
+
+        labels: [
+            'Excellent',
+            'Good',
+            'Average',
+            'Poor'
+        ],
+
+
+        datasets: [{
+
+            data: [
+
+                {{ excellent_count }},
+                {{ good_count }},
+                {{ average_count }},
+                {{ poor_count }}
+
+            ],
+
+
+            backgroundColor: [
+
+                '#28a745',
+                '#17a2b8',
+                '#ffc107',
+                '#dc3545'
+
+            ]
+
+        }]
+
+    },
+
+
+    options: {
+
+        responsive: true,
+
+        maintainAspectRatio: false,
+
+
+        plugins: {
+
+    legend: {
+
+        position: 'bottom',
+
+        labels: {
+
+            font: {
+
+                weight: 'bold',
+
+                size: 14
+
+            }
+
+        }
+
+    }
+
+}
+
+    }
+
+});
+
+</script>
+
+
+</div>
+
+{% endblock %}
