@@ -100,7 +100,11 @@ def admin_login(request):
 def admin_dashboard(request):
     """Admin Dashboard"""
 
-    feedbacks = Feedback.objects.all().order_by("-timestamp")
+    # ALL feedbacks - Total Feedback always uses this
+    all_feedbacks = Feedback.objects.all()
+
+    # Filtered feedbacks
+    feedbacks = all_feedbacks.order_by("-timestamp")
 
     degree = request.GET.get("degree")
     year = request.GET.get("year")
@@ -132,11 +136,25 @@ def admin_dashboard(request):
         "current_course": course,
         "current_rating": rating,
 
-        "total_feedback": feedbacks.count(),
-        "excellent_count": feedbacks.filter(overall_rating="Excellent").count(),
-        "good_count": feedbacks.filter(overall_rating="Good").count(),
-        "average_count": feedbacks.filter(overall_rating="Average").count(),
-        "poor_count": feedbacks.filter(overall_rating="Poor").count(),
+        # Total Feedback always shows complete database count
+        "total_feedback": all_feedbacks.count(),
+
+        # These counts change according to filters
+        "excellent_count": feedbacks.filter(
+            overall_rating="Excellent"
+        ).count(),
+
+        "good_count": feedbacks.filter(
+            overall_rating="Good"
+        ).count(),
+
+        "average_count": feedbacks.filter(
+            overall_rating="Average"
+        ).count(),
+
+        "poor_count": feedbacks.filter(
+            overall_rating="Poor"
+        ).count(),
     }
 
     return render(request, "feedback/admin_dashboard.html", context)
