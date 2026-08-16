@@ -42,17 +42,153 @@ footer {
 
 /* Media query for mobile responsiveness */
 @media (max-width: 768px) {
+
     .container {
         padding: 0 15px;
     }
-    
+
     .btn-group {
         display: flex;
         flex-direction: column;
     }
-    
+
     .btn-group .btn {
         margin-bottom: 0.25rem;
         border-radius: 5px !important;
+    }
+
+
+    /* Header */
+
+    .header {
+        padding: 20px 15px;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: center;
+    }
+
+
+    /* Logo - Left Side */
+
+    .logo {
+        width: 90px;
+        min-width: 90px;
+        margin-bottom: 0;
+        padding-top: 55px;
+    }
+
+    .logo img {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    /* College Details */
+
+    .college {
+        flex: 1;
+        padding-right: 45px;
+    }
+
+    .college h1 {
+        font-size: 21px;
+        line-height: 27px;
+        margin-bottom: 10px;
+    }
+
+    .college h2 {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 8px;
+    }
+
+    .college h3 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+
+    /* Login Button */
+
+    .admin-login {
+        top: 15px;
+        right: 15px;
+        padding: 7px 12px;
+        font-size: 12px;
+        border-radius: 6px;
+        z-index: 10;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        padding: 45px 15px;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .hero-card h2 {
+        font-size: 28px;
+        line-height: 35px;
+    }
+
+    .hero-card p {
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+    .feedback-btn {
+        font-size: 18px;
+        padding: 15px 28px;
+    }
+}
+
+
+/* Small Mobile */
+
+@media (max-width: 400px) {
+
+    .logo {
+        width: 80px;
+        min-width: 80px;
+        padding-top: 55px;
+    }
+
+    .logo img {
+        width: 68px;
+        height: 68px;
+    }
+
+    .college {
+        padding-right: 35px;
+    }
+
+    .college h1 {
+        font-size: 19px;
+        line-height: 24px;
+    }
+
+    .college h2 {
+        font-size: 12px;
+        line-height: 17px;
+    }
+
+    .college h3 {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .admin-login {
+        top: 12px;
+        right: 10px;
+        padding: 6px 10px;
+        font-size: 11px;
     }
 }
